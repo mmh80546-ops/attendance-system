@@ -13,29 +13,62 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: #1f2429;
+            background-image:
+                linear-gradient(rgba(20, 24, 28, 0.72), rgba(20, 24, 28, 0.82)),
+                url('assets/etc-logo-dark.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             min-height: 100vh;
             direction: rtl;
         }
-        
+
         .container {
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        
+
         .header {
             text-align: center;
-            color: white;
             margin-bottom: 30px;
         }
-        
+
+        .header .brand-logo {
+            width: 160px;
+            max-width: 60%;
+            margin: 0 auto 16px;
+            display: block;
+            background: rgba(255, 255, 255, 0.96);
+            padding: 16px 20px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 22px;
+        }
+
+        .header p {
+            color: #f47920;
+            margin-top: 6px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
         .app-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
             backdrop-filter: blur(10px);
+            border-top: 4px solid #f47920;
         }
         
         .form-group {
@@ -70,8 +103,13 @@
             margin-bottom: 10px;
         }
         
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #f47920;
+        }
+
         .btn-primary {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #f47920, #c75e12);
             color: white;
         }
         
@@ -114,7 +152,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🏢 نظام الحضور والانصراف</h1>
+            <img src="assets/etc-logo-light.jpeg" alt="شركة مسارات الامتياز - Excellence Tracks Co." class="brand-logo">
+            <h1>نظام الحضور والانصراف</h1>
             <p>Attendance Management System</p>
         </div>
         
