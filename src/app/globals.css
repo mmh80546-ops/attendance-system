@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #14181c;
+  background-image:
+    linear-gradient(rgba(12, 15, 18, 0.9), rgba(12, 15, 18, 0.95)),
+    url('/etc-logo-dark.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl bg-white/95 shadow-xl border-t-4 border-brand-orange p-6;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5
+           font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary { @apply btn bg-brand-orange text-white hover:bg-brand-orange-dark; }
+  .btn-success { @apply btn bg-emerald-600 text-white hover:bg-emerald-700; }
+  .btn-danger  { @apply btn bg-red-600 text-white hover:bg-red-700; }
+  .btn-ghost   { @apply btn bg-slate-100 text-slate-700 hover:bg-slate-200; }
+  .field {
+    @apply w-full rounded-xl border-2 border-slate-200 px-3 py-2.5 text-base
+           outline-none focus:border-brand-orange;
+  }
+  .label { @apply mb-1.5 block font-semibold text-slate-700; }
+  .badge { @apply inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold; }
+  .stat-card { @apply rounded-2xl bg-white/95 p-5 shadow-lg; }
+}
