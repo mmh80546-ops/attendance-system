@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { navFor } from '@/lib/roles';
 import type { AppRole } from '@/lib/types';
 import { LogoutButton } from './LogoutButton';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export async function AppShell({
   role,
@@ -30,8 +31,9 @@ export async function AppShell({
               <p className="text-xs text-brand-orange">{t(`roles.${role}`)}</p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <span className="hidden text-sm text-white/80 sm:inline">{name}</span>
+            <LanguageSwitcher />
             <LogoutButton />
           </div>
         </div>
